@@ -27,12 +27,12 @@ switch ($_SERVER['REQUEST_METHOD']) {
 		//parámetros get y comprobamos:
 		//1º) si recibimos parámetros
 		//2º) si los parámetros están permitidos
-		$usuarios = $user->get($params);
+		$users = $user->get($params);
 
 		//Creamos la respuesta en caso de realizar una petición correcta
 		$response = array(
 			'result' => 'ok',
-			'usuarios' => $usuarios
+			'users' => $users
 		);
 
 		Response::result(200, $response); //devolvemos la respuesta a la petición correcta
